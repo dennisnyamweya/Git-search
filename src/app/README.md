@@ -15,6 +15,9 @@ There are no known bugs in the application,you are free to contact me via my ema
 * Javascript
 * CSS/Bootstrap
 * Typescript/Angular
+## BDD
+### Business Logic
+This application allows creation of quotes and publisher.It also takes the names of the quotes publisher.It also allows voting of quotes whether they are inspirational or not.The application also shows the number of days that has passed since published date.
 ## Support and contact details
 You may contact me via my email below:
 denisnyamweya813@gmail.com
