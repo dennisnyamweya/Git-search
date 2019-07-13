@@ -1,21 +1,54 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+<div class="align-center">
+  <h1>Welcome to Git-Search</h1>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<div>
+  <div class="users"><h2>Search Github Profiles :</h2><input type="text" name="username" (keyup)="findProfile()" [(ngModel)]="username" placeholder="Type User Name Here" id="txtbox"> 
+  </div>
+  <div class="container-fluid" *ngIf="profile">
+      <div class="row">
+        <div class="col-sm-12">
+            <div class="bg-light">{{profile.name}} ({{profile.login}}) <span *ngIf="profile.company"></span>,
+              Working at {{profile.location}}
+            </div>
+        </div>
+      </div>
+    <div class="row p-4">
+      <div class="col-sm-4">
+        <img src="{{profile.avatar_url}}" class="rounded-circle img-fluid img-responsive" alt="Oops Image Not Abvilable">
+        <p><a href="{{profile.html_url}}" target="blank" class="btn btn-lg btn-success mt-3 ml-5">View Profile On Github</a></p>
+      </div>
+      <div class="col-sm-4">
+        <ul class="list-group">
+          <li class="list-group-item">Bio : {{profile.bio}}</li>
+          <li class="list-group-item">Blog : {{profile.blog}}</li>
+          <li class="list-group-item">Created At : {{profile.created_at}}</li>
+          <li class="list-group-item">Comapny : {{profile.company}}</li>
+          <li class="list-group-item">Email : {{profile.email}}</li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <div>
+          <p>
+            <span class="badge badge-primary p-1">Followers : {{profile.followers}}</span>
+            <span class="badge badge-success p-1 ml-1">Following : {{profile.following}}</span>
+            <span class="badge badge-info p-1 ml-1">Public_Gists : {{profile.public_gists}}</span>
+            <span class="badge badge-dark p-1 ml-1">Public_Repo : {{profile.public_repos}}</span>
+          </p>
+          
+          <div class="card">
+            <div class="card-header">
+              <h2>Repos</h2>
+            </div>
+            <div class="card-body" *ngFor="let repo of repos">
+              <a href="{{repo.html_url}}" target="blank" class="btn btn-warning">View Project</a> &nbsp;{{repo.name}} -
+              {{repo.description}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 <router-outlet></router-outlet>
