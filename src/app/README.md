@@ -17,7 +17,7 @@ There are no known bugs in the application,you are free to contact me via my ema
 * Typescript/Angular
 ## BDD
 ### Business Logic
-This application allows creation of quotes and publisher.It also takes the names of the quotes publisher.It also allows voting of quotes whether they are inspirational or not.The application also shows the number of days that has passed since published date.
+This application allows a user to input GitHub username into a form, submit it, and see names and descriptions of that person's public repositories.A person can also look for repositories.
 ## Support and contact details
 You may contact me via my email below:
 denisnyamweya813@gmail.com
