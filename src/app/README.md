@@ -19,7 +19,7 @@ There are no known bugs in the application,you are free to contact me via my ema
 ### Business Logic
 This application allows a user to input GitHub username into a form, submit it, and see names and descriptions of that person's public repositories.A person can also look for repositories.
 ## User Interface Logic
-The user interface is a one page website that has an input section for creating new quote,date and name of publisher.The user can enter their names as authors of the quote,the quote itself and the date of submission.They then click on the button add quote for it to be added to the quotes section.
+The user can input git username nto a form, submit it, and see names and descriptions of that person's public repositories.The person can view of the projects that have already been done. 
 ## Support and contact details
 You may contact me via my email below:
 denisnyamweya813@gmail.com
