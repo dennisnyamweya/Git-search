@@ -9,3 +9,11 @@ h1{
     font-size: 60px;
     text-align: center;
 }
+.container-fluid{
+    background-image: url("https://wallpapercave.com/wp/AlwxnjW.jpg");
+    height: 800px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

@@ -8,10 +8,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class SearchUserService {
 
     private username: string;
+    private clientid='';
+    private clientsecret='';
 
     constructor(private http: HttpClient) {
-        console.log('Service Started.....');
-        this.username = '';
+        console.log('Service has already Started.....');
+        this.username = 'dennisnyamweya';
      }
 
     getuser() {
